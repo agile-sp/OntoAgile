@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/unicauca/ontologies/2018/6/OntoAgile"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/unicauca/ontologies/2018/6/OntoAgile">
+    <Prefix name="" IRI="http://www.semanticweb.org/unicauca/ontologies/2018/6/OntoAgile"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An ontology to support the assessment of the agility of software processes</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Measurement_approach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Decision_criteria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AgileValue1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGuidedByValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agile_principle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hybrid_approach"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValueDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agile_approach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plan-driven_approach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSupportedByPrinciple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agile_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Analysis_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software_development_life_cycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Process"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Agile_approach"/>
+        <Class IRI="#Software_development_life_cycle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Agile_value"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasValueDescription"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Analysis_model"/>
+        <Class IRI="#Measurement_approach"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hybrid_approach"/>
+        <Class IRI="#Software_development_life_cycle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indicator"/>
+        <Class IRI="#Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Measurement"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plan-driven_approach"/>
+        <Class IRI="#Software_development_life_cycle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rol"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tool"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Activity"/>
+        <Class IRI="#Agile_approach"/>
+        <Class IRI="#Agile_principle"/>
+        <Class IRI="#Agile_value"/>
+        <Class IRI="#Decision_criteria"/>
+        <Class IRI="#Hybrid_approach"/>
+        <Class IRI="#Measure"/>
+        <Class IRI="#Measurement_approach"/>
+        <Class IRI="#Plan-driven_approach"/>
+        <Class IRI="#Process"/>
+        <Class IRI="#Product"/>
+        <Class IRI="#Resource"/>
+        <Class IRI="#Scale"/>
+        <Class IRI="#Software_development_life_cycle"/>
+        <Class IRI="#Stage"/>
+        <Class IRI="#Task"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Rol"/>
+        <Class IRI="#Tool"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Agile_value"/>
+        <NamedIndividual IRI="#AgileValue1"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueDescription"/>
+        <NamedIndividual IRI="#AgileValue1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Individuals and interactions over processes and tools</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGuidedByValue"/>
+        <Class IRI="#Agile_principle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGuidedByValue"/>
+        <Class IRI="#Hybrid_approach"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSupportedByPrinciple"/>
+        <Class IRI="#Agile_value"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isGuidedByValue"/>
+        <Class IRI="#Agile_value"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSupportedByPrinciple"/>
+        <Class IRI="#Agile_principle"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
